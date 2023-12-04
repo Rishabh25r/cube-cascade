@@ -1,0 +1,70 @@
+
+.backgroundgif{
+    position: fixed;
+    margin: 0;
+      padding: 0;
+      background-size: cover;
+      background-position: center;
+      filter: blur(20px);
+      height: 100%; 
+      width: 60%;/* Make the background cover the entire viewport height */
+      display: flex;
+      align-items: center;
+      justify-content: center; /* Set text color for better visibility */
+      font-family: Arial, sans-serif;
+      z-index: -1;
+}
+body {
+    background-color: black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.dice-container {
+    display: flex;
+}
+
+.dice {
+    width: 200px;
+    height: 200px;
+    background-color:#f72525;
+    filter: opacity(67%);
+    border: 1px solid #ccc;
+    margin: 10px;
+    border-radius: 15%;
+    display: flex;
+    margin-top: 25%;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    animation: rotateDice 2s;
+}
+
+@keyframes rotateDice {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+
+button {
+    background-color: rgb(255, 252, 99);
+    margin-top: 30px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 20%;
+}
+
+#result {
+    font-size: 2rem;
+    color: aqua;
+}

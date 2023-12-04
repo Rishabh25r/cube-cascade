@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+     .video-background{
+        position:fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+     }
+     .content{
+        position: relative;
+        z-index: 1;
+        border: 5px solid gray;
+        border-radius: 15px;
+        width: 55%;
+            margin-top: 11%;
+            margin-left: 20%;
+            padding-bottom: 10px;
+            font-size:2rem;
+            font-family: 'Josefin Sans', sans-serif;
+            text-align: center;
+     }
+     input {
+            width: 50%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+     .bttn{
+            display: inline-block;
+         padding: 10px 20px;
+         font-size: 16px;
+        font-weight: bold;
+          text-align: center;
+         text-decoration: none;
+        cursor: grab;
+         border: none;
+          border-radius: 5px;
+         background-color:firebrick; /* Button background color */
+         color:aliceblue; 
+     }
+
+    </style>
+</head>
+<body>
+    <video class="video-background" autoplay loop  muted>
+     <source src="./stock-footage-flying-over-abstract-sand-landscape-aerial-view-fly-over (online-video-cutter.com).mp4" type="video/mp4">
+    </video>
+    <div class="content">
+        <p>
+            Lets start with getting to know you better ;)
+        </p>
+        <form action="process-form.php" method="post">
+            <label for="name">Enter Your Name:</label>
+            <br>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="age">Age:</label>
+            <br>
+            <input type="number" id="age" name="age" required>
+             <br>
+            </form>
+            <a href="username.html">
+                <button class="bttn" type="submit">Submit</button>
+            </a>
+    </div>
+</body>
+</html>

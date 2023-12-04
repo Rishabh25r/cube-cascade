@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .video-background{
+        position:fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+     }  
+     .content{
+            position: relative;
+            z-index: 1;
+            border: 5px solid gray;
+            border-radius: 15px;
+            width: 55%;
+            height: 300px;
+                margin-top: 11%;
+                margin-left: 20%;
+                padding-bottom: 20px;
+                font-size:2rem;
+                font-family: 'Josefin Sans', sans-serif;
+                text-align: center;
+         }
+         input {
+            width: 50%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+         .bttn{
+            display: inline-block;
+         padding: 10px 20px;
+         font-size: 16px;
+        font-weight: bold;
+          text-align: center;
+         text-decoration: none;
+        cursor: grab;
+         border: none;
+          border-radius: 5px;
+         background-color:firebrick; /* Button background color */
+         color:aliceblue; 
+     }
+     .pp{
+        font-size: 0.9rem;
+     }
+     #display-name {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 1.2em;
+            color: white;
+        }
+         
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Retrieve the username from localStorage
+            var savedUsername = localStorage.getItem('username');
+            if (savedUsername) {
+                document.getElementById('display-name').innerText = "Hello, " + savedUsername + "!";
+                document.getElementById('name-form').style.display = 'none';
+            }
+        });
+         // Save the username to localStorage
+         function submitform(){
+         localStorage.setItem('username', userName);
+         }
+    </script>
+</head>
+<body>
+    <video class="video-background" autoplay loop  muted>
+        <source src="./stock-footage-flying-over-abstract-sand-landscape-aerial-view-fly-over (online-video-cutter.com).mp4" type="video/mp4">
+       </video>
+       <div class="content">
+        <p>
+            Choose a username for yourself
+        </p>
+        <form action="process-form.php" method="post">
+            <input type="text" id="username" name="username" required>
+            <br>
+           
+            <button class="bttn" onclick="submitform()"> <a href="./game/index1.html" >Submit</a></button>
+            
+            <div id="display-name"></div>
+            </form>
+            <p class="pp">
+               ( Hint:make it unique to stand out among others ;)
+            </p>
+       </div>
+</body>
+</html>
