@@ -1,6 +1,6 @@
 
 alert("Lets start the game");
-var maxscore=prompt("Enter maximum desured score");
+var maxscore=prompt("Enter maximum desired score");
 function rollDice() {
     
     // Get random numbers for the two dice
